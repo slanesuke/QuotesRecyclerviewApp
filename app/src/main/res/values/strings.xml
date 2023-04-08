@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">QuotesRecyclerviewApp</string>
+    <string name="image_to_go_with_the_quote">Image to go with the quote</string>
+    <string name="i_must_follow_the_people_am_i_not_their_leader">I must follow the people. Am i not their Leader?</string>
+    <string name="ben_disraeli">Ben Disraeli</string>
+</resources>
