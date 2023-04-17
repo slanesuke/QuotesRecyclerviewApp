@@ -19,9 +19,6 @@ class MainActivity : AppCompatActivity(), QuoteSelectionRecyclerViewAdapter.Cate
         categoryRecyclerView.layoutManager = LinearLayoutManager(this)
         categoryRecyclerView.adapter = QuoteSelectionRecyclerViewAdapter(this)
 
-
-
-
     }
 
     companion object {
@@ -30,7 +27,8 @@ class MainActivity : AppCompatActivity(), QuoteSelectionRecyclerViewAdapter.Cate
     }
 
     override fun listItemClicked(quotesCategory: QuoteCategory) {
-        TODO("Not yet implemented")
+        // Can't figure out
+        showDailyQuoteForCategory(quotesCategory)
     }
 
     private fun showDailyQuoteForCategory(quotesCategory: QuoteCategory){
@@ -41,4 +39,3 @@ class MainActivity : AppCompatActivity(), QuoteSelectionRecyclerViewAdapter.Cate
     }
 }
 
-// Left off on video 8! however my app is crashing

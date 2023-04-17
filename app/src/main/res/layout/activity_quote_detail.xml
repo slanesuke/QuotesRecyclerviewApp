@@ -15,7 +15,7 @@
         android:adjustViewBounds="true"
         android:contentDescription="@string/image_to_go_with_the_quote"
         android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndof="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/management" />

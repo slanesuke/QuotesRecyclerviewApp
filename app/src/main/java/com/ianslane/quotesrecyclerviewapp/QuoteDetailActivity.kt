@@ -7,7 +7,7 @@ import com.ianslane.quotesrecyclerviewapp.databinding.ActivityQuoteDetailBinding
 
 class QuoteDetailActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityQuoteDetailBinding
+    lateinit var binding: ActivityQuoteDetailBinding
 
     private val quotesMap = mapOf(
         "management" to Quote("I must follow the people. A I not the leader?",
@@ -38,19 +38,21 @@ class QuoteDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_quote_detail)
+        binding = DataBindingUtil.setContentView(this,
+            R.layout.activity_quote_detail)
 
         val categoryParameter = intent.getStringExtra(MainActivity.QUOTE_CATEGORY_KEY)
         val categoryTitle = intent.getStringExtra(MainActivity.QUOTE_TITLE_KEY)
         val quote = quotesMap[categoryParameter]
 
+        println("Quotes: " + quote?.image + " " + categoryParameter)
+
         title = categoryTitle
-        binding.imgQuoteImage.setImageResource(resources.getIdentifier(quote?.image, null,
-            packageName))
+        binding.imgQuoteImage.setImageResource(
+            resources.getIdentifier(quote?.image, null, packageName))
         binding.txtQuoteText.text = quote?.quoteText
         binding.txtQuoteAuthor.text = quote?.author
     }
 }
 
-// Left off at video 9
 
